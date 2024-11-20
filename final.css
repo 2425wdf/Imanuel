@@ -1,0 +1,333 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #4f4f4f;
+    background-color: #777272; /* Latar belakang netral dan lembut */
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "sidenav header"
+        "sidenav main"
+        "sidenav footer";
+    height: 100vh;
+}
+
+.header {
+    grid-area: header;
+    background-color: #098dec; /* Dark Teal untuk header */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    color: #fff;
+}
+
+.header__search {
+    font-size: 1.2rem;
+}
+
+.header__avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px; 
+    height: 45px; 
+    border-radius: 50%; 
+    overflow: hidden; 
+    background-color: #523e3e; 
+    border: 2px solid #fff; 
+    cursor: pointer; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease; 
+}
+
+.header__avatar img {
+    width: 100%; 
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 50%; 
+}
+
+.header__avatar:hover {
+    transform: scale(1.1); 
+}
+
+.sidenav {
+    grid-area: sidenav;
+    background-color: #333333; /* Charcoal Grey untuk sisi navigasi */
+    color: white;
+    padding-top: 70px;
+    padding-left: 40px;
+}
+
+.sidenav__list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidenav__list-item {
+    margin: 2rem 0;
+    cursor: pointer;
+    font-size: 1rem;
+    color: #c8d0d8; /* Warna abu-abu muda */
+}
+
+.sidenav__list-item:hover {
+    color: #fff;
+    font-weight: bold;
+}
+
+.main {
+    grid-area: main;
+    padding: 1rem;
+    background-color: #f0ce8f; /* Soft Beige untuk latar belakang konten utama */
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #c37c10; /* Latar belakang kuning pucat */
+    padding: 1rem 2rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    height: 30px;
+}
+
+.main-header__heading {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.main-header__updates {
+    font-size: 1rem;
+    color: #555;
+}
+
+.main-overview {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-bottom: 1rem;
+}
+
+.overviewcard {
+    background-color: #969c19; /* Warm Taupe untuk kartu */
+    padding: 1rem;
+    border-radius: 4px;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 70px;
+}
+
+.overviewcard__icon {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.overviewcard__info {
+    font-size: 0.9rem;
+}
+
+.main-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 15px;
+}
+
+.card:first-child {
+    grid-column: 1 / 2;
+    grid-row: 1 / span 2;
+    height: 700px;
+}
+
+.card {
+    background-color: #d48184; /* Soft Warm Taupe untuk kartu */
+    padding: 1.5rem;
+    border-radius: 4px;
+    color: #fff;
+    text-align: left;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+.card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.card ul li {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #2098f3; /* Slate Blue untuk footer */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    align-items: center;
+}
+
+.footer__copyright,
+.footer__signature {
+    font-size: 0.9rem;
+}
+
+.overviewcard__button {
+    background-color: #fff;
+    color: #333;
+    padding: 10px;
+    border: none;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.overviewcard__button:hover {
+    background-color: #f0f0f0;
+}
+
+.progress-bar {
+    background-color: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 8px;
+    margin: 5px 0;
+}
+
+.progress {
+    background-color: #4caf50;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.task.warning {
+    color: #e74c3c; /* Merah lebih cerah untuk peringatan */
+    font-weight: bold;
+}
+
+#calendar {
+    background-color: #f8c8b0; /* Soft Peach */
+    border-radius: 5px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-header {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#month-name {
+    font-size: 1.6rem;
+    color: #333;
+}
+
+.calendar {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    font-size: 14px;
+}
+
+.calendar th, .calendar td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.calendar thead {
+    background-color: #d36969; /* Soft Lavender */
+}
+
+.calendar td {
+    height: 40px;
+}
+
+.calendar td:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+.calendar .event {
+    background-color: #b9495a; /* Warm Coral */
+    color: #000;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.calendar .event:hover {
+    background-color: #661e0c;
+}
+
+
+.header {
+    display: grid;
+    grid-template-columns: auto auto 1fr auto auto;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #125394; /* Dark blue for header */
+    color: white;
+}
+
+.header__logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.header__search input {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+.header__info {
+    text-align: center;
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #ecf0f1;
+}
+
+.header__notifications {
+    position: relative;
+    font-size: 1.5rem;
+}
+
+.notification-badge {
+    position: absolute;
+    top: 0;
+    right: -5px;
+    background-color: rgb(207, 127, 24);
+    color: white;
+    font-size: 0.8rem;
+    border-radius: 50%;
+    padding: 2px 6px;
+}
+
+.header__avatar img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}

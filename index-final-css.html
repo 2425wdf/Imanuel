@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="final.css" />
+    <title>Final Web Design - CSS Grid Page Dashboard</title>
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="menu-icon">
+        <i class="fas fa-bars"></i>
+      </div>
+
+      <header class="header">
+        <div class="header__logo">
+          <h1>Dashboard</h1>
+        </div>
+        <div class="header__search">
+          <input type="text" placeholder="Search..." />
+        </div>
+        <div class="header__info">
+          <p>"Kesuksesan adalah hasil kerja keras dan ketekunan."</p>
+        </div>
+        <div class="header__notifications">
+          <i class="fas fa-bell"></i>
+          <span class="notification-badge">3</span>
+        </div>
+        <div class="header__avatar">
+          <img src="avatar.png"/>
+        </div>
+      </header>
+
+      <aside class="sidenav">
+        <div class="sidenav__close-icon">
+          <i class="fas fa-times"></i>
+        </div>
+        <ul class="sidenav__list">
+          <li class="sidenav__list-item">Jadwal Kuliah</li>
+          <li class="sidenav__list-item">Tugas</li>
+          <li class="sidenav__list-item">Nilai</li>
+          <li class="sidenav__list-item">Organisasi</li>
+          <li class="sidenav__list-item">Pengaturan</li>
+        </ul>
+      </aside>
+
+      <main class="main">
+        <div class="main-header">
+          <div class="main-header__heading">Halo, walintukan,imanuel</div>
+          <div class="main-header__updates">
+            Tugas Terakhir: "Menyelesaikan Project akhir"
+          </div>
+        </div>
+
+        <div class="main-overview">
+          <div class="overviewcard">
+            <button class="overviewcard__button">Jadwal Aktif</button>
+            <div class="overviewcard__info">2 Kelas Minggu Ini</div>
+          </div>
+          <div class="overviewcard">
+            <button class="overviewcard__button">Tugas</button>
+            <div class="overviewcard__info">2 Tugas Belum Selesai</div>
+          </div>
+          <div class="overviewcard">
+            <button class="overviewcard__button">Nilai</button>
+            <div class="overviewcard__info">Rata-rata: 85</div>
+          </div>
+          <div class="overviewcard">
+            <button class="overviewcard__button">Organisasi</button>
+            <div class="overviewcard__info">2 Kegiatan Minggu Ini</div>
+          </div>
+        </div>
+
+        <div class="main-cards">
+          <div class="card">
+            <h3>Detail Tugas</h3>
+            <ul>
+              <li class="task warning">
+                Tugas 1: "Project Akhir Database" - Deadline: 22 Nov 2024
+                <div class="progress-bar">
+                  <div class="progress" style="width: 80%"></div>
+                </div>
+              </li>
+              <li>
+                Tugas 2: "Tugas FPK" - Deadline: 24 Nov 2024
+                <div class="progress-bar">
+                  <div class="progress" style="width: 40%"></div>
+                </div>
+              </li>
+              <li>
+                Tugas 3: "Project MIS" - Deadline: 26 Nov 2024
+                <div class="progress-bar">
+                  <div class="progress" style="width: 20%"></div>
+                </div>
+              </li>
+              <li>
+                Tugas 4: "Project Entreprenuership" - Deadline: 27 Nov 2024
+                <div class="progress-bar">
+                  <div class="progress" style="width: 5%"></div>
+                </div>
+              </li>
+              <li>
+                Tugas 5: "Tugas Bahasa Inggris" - Deadline: 29 Nov 2024
+                <div class="progress-bar">
+                  <div class="progress" style="width: 2%"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Jadwal Kuliah</h3>
+            <ul>
+              <li>Senin: Management Information System - 10:00 - 11:30</li>
+              <li>Selasa: Database - 80:30 - 10:00</li>
+              <li>Rabu: Entreprenuership - 13:00 - 14:30</li>
+              <li>Kamis: civics - 16:00 - 18:00</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Kalender</h3>
+            <div id="calendar">
+                <div class="calendar-header">
+                    <span id="month-name">November 2024</span> <!-- Nama bulan -->
+                </div>
+                <table class="calendar">
+                    <thead>
+                        <tr>
+                            <th>Sun</th>
+                            <th>Mon</th>
+                            <th>Tue</th>
+                            <th>Wed</th>
+                            <th>Thu</th>
+                            <th>Fri</th>
+                            <th>Sat</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>1</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                            <td>8</td>
+                            <td class="event">09</td>
+                        </tr>
+                        <tr>
+                            <td class="event">10</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                        </tr>
+                        <tr>
+                            <td>17</td>
+                            <td>18</td>
+                            <td>19</td>
+                            <td class="event">20</td>
+                            <td>21</td>
+                            <td>22</td>
+                            <td>23</td>
+                        </tr>
+                        <tr>
+                            <td>24</td>
+                            <td>25</td>
+                            <td>26</td>
+                            <td>27</td>
+                            <td>28</td>
+                            <td>29</td>
+                            <td>30</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="footer__copyright">&copy; 2024</div>
+        <div class="footer__signature">imanuel</div>
+      </footer>
+    </div>
+  </body>
+</html>
